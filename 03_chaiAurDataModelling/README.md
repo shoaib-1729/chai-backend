@@ -1,5 +1,3 @@
-Certainly! Here’s a `README.md` file that you can copy and paste directly into VS Code:
-
 ````markdown
 # Defining Data Models in Mongoose - 3 Steps
 
@@ -70,8 +68,5 @@ const TaskSchema = new mongoose.Schema({
   // Other fields...
 });
 ```
-
-```
-
 This `README.md` file provides clear instructions and code examples for defining data models in Mongoose, adhering to common conventions and best practices.
-```
+
