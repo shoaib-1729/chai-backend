@@ -1,4 +1,4 @@
-````markdown
+
 # Defining Data Models in Mongoose - 3 Steps
 
 When defining data models in Mongoose, follow these steps:
@@ -8,9 +8,9 @@ When defining data models in Mongoose, follow these steps:
 ```javascript
 const mongoose = require("mongoose");
 ```
-````
 
 ## 2. Define Schema
+```
 
 - **Schema**: Outline the data points or fields.
 - **Timestamps**: Add `{ timestamps: true }` to include `createdAt` and `updatedAt` fields automatically.
@@ -24,8 +24,8 @@ const ExampleSchema = new mongoose.Schema(
   { timestamps: true }
 );
 ```
-
 ## 3. Export Models
+
 
 - **Model Name**: The name used inside the database.
 - **Schema Reference**: The schema the model is based on.
