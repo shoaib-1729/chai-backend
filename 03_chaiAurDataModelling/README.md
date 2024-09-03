@@ -21,6 +21,7 @@ const ExampleSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+```
 ## 3. Export Models
 
 
