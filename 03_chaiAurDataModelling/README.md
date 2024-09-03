@@ -8,9 +8,7 @@ When defining data models in Mongoose, follow these steps:
 ```javascript
 const mongoose = require("mongoose");
 ```
-
 ## 2. Define Schema
-```
 
 - **Schema**: Outline the data points or fields.
 - **Timestamps**: Add `{ timestamps: true }` to include `createdAt` and `updatedAt` fields automatically.
@@ -23,7 +21,6 @@ const ExampleSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-```
 ## 3. Export Models
 
 
