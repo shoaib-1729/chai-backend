@@ -39,6 +39,7 @@ const orderSchema = new mongoose.Schema({
     },
     // sub model
     orderItems: {
+        // custom type aise dete hai, yeh ek array hogi aur array ke har item ka schema 'orderItemSchema' se liya jaayega
         type: [orderItemSchema],
         /*
         aise bhi kar sakte hai
@@ -60,4 +61,4 @@ const orderSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 // model
-export const Order = mongoose.models("Order", orderSchema);
+export const Order = mongoose.model("Order", orderSchema);

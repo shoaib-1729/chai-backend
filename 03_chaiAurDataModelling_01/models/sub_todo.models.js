@@ -19,4 +19,4 @@ const subTodoSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 //model
-export const SubTodo = mongoose.models("SubTodo", subTodoSchema);
+export const SubTodo = mongoose.model("SubTodo", subTodoSchema);
