@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 // schema
-const userSchema = mongoose.Schema({
+const userSchema = new mongoose.Schema({
     // username field
     // first approach
     //field : Type
