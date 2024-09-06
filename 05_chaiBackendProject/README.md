@@ -85,16 +85,18 @@ In this approach, the database connection logic is separated into its own module
 3. **Code Example (`db/connection.js`):**
 
    ```javascript
-   import mongoose from 'mongoose';
+   import mongoose from "mongoose";
 
    const connectDB = async () => {
-       try {
-           await mongoose.connect(`${process.env.MONGODB_URI}/${process.env.DB_NAME}`
-           console.log('Database connected successfully');
-       } catch (error) {
-           console.error('Database connection error:', error);
-           process.exit(1);
-       }
+     try {
+       await mongoose.connect(
+         `${process.env.MONGODB_URI}/${process.env.DB_NAME}`
+       );
+       console.log("Database connected successfully");
+     } catch (error) {
+       console.error("Database connection error:", error);
+       process.exit(1);
+     }
    };
 
    export default connectDB;
