@@ -1,4 +1,4 @@
-// yaha bas db cpnnection ka code hoga, baaki kuch nahi
+// yaha bas db connection ka code hoga, baaki kuch nahi
 import mongoose from "mongoose";
 import { DB_NAME } from "../constants.js";
 
@@ -12,7 +12,7 @@ const connectDB = async() => {
         console.log(`
             MongoDB connected successfully!
             ------------------------------
-            DB Host: ${connectionInstance}
+            DB Host: ${connectionInstance.connection.host}
             `);
     } catch (error) {
         console.error(`

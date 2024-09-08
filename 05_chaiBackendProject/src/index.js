@@ -2,19 +2,38 @@
 //     path: "./env",
 // });
 import dotenv from "dotenv";
-import mongoose from "mongoose";
-import express from "express";
-import { DB_NAME } from "./constants.js";
-import connectDB from "./db/index.js";
+import connectDB from "./db/dbConnect.js";
+import { app } from "./app.js";
 
 // dotenv config
 dotenv.config({
     path: "./env",
 });
+
+// store port inside a variable
+const port = process.env.PORT || 8000;
+
 // server using express, db connect using mongoose
 
 // a function to connect to the DB, jo ki export karayege
-connectDB();
+// async method generally promise return karega, yaha usko handle kar sakte ho
+connectDB()
+    .then(() => {
+        // listen to errors
+        app.on("error", (error) => {
+            console.log("ERR: ", error);
+            throw error;
+        });
+        // listen to port
+        app.listen(port, () => {
+            console.log(`Server is listening on port ${port}`);
+        });
+    })
+    .catch((error) => {
+        console.log("Mongodb connection failed!!!", error);
+    });
+
+/*(
 
 // setting up express app
 const app = express();
@@ -32,6 +51,8 @@ app.on("error", (error) => {
 app.listen(process.env.PORT, () => {
     console.log(`Server is listening on Port ${process.env.PORT}`);
 });
+
+)*/
 
 /*(
 // express app
